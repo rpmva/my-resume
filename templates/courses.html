@@ -10,132 +10,27 @@
     <h1 class="mt-5"><i class="fa fa-calendar" aria-hidden="true"></i> Ryan's Spring Courses:</h1>
     <ul>
         {% for course in courses %}
-          <li>{{course}}</li>
+          <li> <a href="#{{course[0]}}" data-toggle="modal" data-target="#{{course[0]}}" >{{course[1]}}</a></li>
+
+          <div class="modal fade bannerformmodal" tabindex="-1" role="dialog" aria-labelledby="bannerformmodal" aria-hidden="true" id="{{course[0]}}">
+           <div class="modal-dialog modal-sm">
+                 <div class="modal-content">
+                   <div class="modal-content">
+                         <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                         <h4 class="modal-title" id="myModalLabel">{{course[1]}}</h4>
+                         </div>
+                         <div class="modal-body">
+                           {{course[2]}}
+                       </div>
+                     </div>
+
+                   </div>
+                 </div>
+               </div>
         {% endfor%}
     </ul>
   </div>
-  <!-- Button for course one -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#c1">
-  ACCT208
-</button>
-<!-- Modal -->
-<div class="modal fade" id="c1" tabindex="-1" role="dialog" aria-labelledby="course1" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="course1">ACCT208</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Introduction to managerial accounting. Topics: manufacturing accounting, cost-volume-profit analysis, job-order accounting, budgeting, standard costs and variance analysis, <br> contribution approach to decision analysis, absorption and variable costing.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<br>
-<br>
-  <!-- Button for course two -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#c2">
-  CISC250
-</button>
-<!-- Modal -->
-<div class="modal fade" id="c2" tabindex="-1" role="dialog" aria-labelledby="course2" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="course2">CISC250</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Examines technologies of information transmission currently utilized in the business environments and the implications of these technologies upon the development and <br> implementation of information systems. Provides a basic background in the convergence of voice, data and video services into common digital networks. Security issues also considered</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<br>
-<br>
-<!-- Button for course three -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#c3">
-FINC311
-</button>
-<!-- Modal -->
-<div class="modal fade" id="c3" tabindex="-1" role="dialog" aria-labelledby="course3" aria-hidden="true">
-<div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="course3">FINC311</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <p>Introduces fundamental techniques and concepts related to the financial management of business firms. Topics include the time value of money, valuation, capital budgeting, <br> working capital management, cost of capital, capital structure analysis, short and long term financing.</p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    </div>
-  </div>
-</div>
-</div>
-<br>
-<br>
-<!-- Button for course four -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#c4">
-BUAD306
-</button>
-<!-- Modal -->
-<div class="modal fade" id="c4" tabindex="-1" role="dialog" aria-labelledby="course4" aria-hidden="true">
-<div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="course4">BUAD306</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <p>Analysis of major problems faced by operations managers at different levels of management. Topics include scheduling, forecasting, process design, inventory management <br> and quality management.</p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    </div>
-  </div>
-</div>
-</div>
-<br>
-<br>
-<!-- Button for course fIVE -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#c5">
-BUAD470
-</button>
-<!-- Modal -->
-<div class="modal fade" id="c5" tabindex="-1" role="dialog" aria-labelledby="course5" aria-hidden="true">
-<div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="course5">BUAD470</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <p>Selling as the process of commercial persuasion and as a service to the customer. Major operating responsibilities of the sales manager, recruitment, training, motivation, <br> compensation, territory management and manpower planning and control.</p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    </div>
-  </div>
-</div>
-</div>
+
 
 {% endblock%}

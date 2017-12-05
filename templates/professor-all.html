@@ -6,7 +6,7 @@
   <div class="container">
     <h1 class="mt-5"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Professors:</h1>
     <div class="row bottom-margin">
-      <a href="/professor/add" class="btn btn-primary" role="button" aria-disabled="true">Add Professors</a>
+      <a href="/professors/add" class="btn btn-primary" role="button" aria-disabled="true">Add Professors</a>
     </div>
     {% if professors %}
       <table class="table">
@@ -26,6 +26,7 @@
               <td>{{professor.department}}</td>
               <td>
                 <a href="/professors/edit/{{professor.id}}" class="btn btn-success" role="button" aria-disabled="true">Edit</a>
+                <a href="/professors/delete/{{professor.id}}" class="btn btn-danger" role="button" aria-disabled="true"> Delete</a>
               </td>
           </tr>
           {% endfor%}
